@@ -1,98 +1,169 @@
-📖 לָשׁוֹן שֶׁקֶר — Язык лжи
+```markdown
+# 📜 HaLev HaLashon (הלב הלשון)
 
-Как переводы исказили Слово Яхве и заменили истину
+**AI-powered restoration of Tanakh through Jewish tradition. Detecting and removing Greek, Latin, and Slavic translation corruptions. Returning to the original linguistic, etymological, and textual meaning.**
 
-מָבוֹא — Введение
+---
 
-Есть слово, которое было сказано на горе Синай. Есть имена, которые Яхве открыл пророкам. Есть понятия, которые вели народ через пустыню, через изгнания, через возвращения.
+## 🎯 What This Project Does
 
-Но до нас эти слова дошли не в чистом виде. Они прошли через греческий перевод, через латынь, через церковнославянский, через синодальный. Каждый переводчик что-то добавлял, что-то убирал, что-то переворачивал. Не со зла, а из своего понимания. Но результат один: истина стала неузнаваемой.
+Church translations (Greek Septuagint, Latin Vulgate, Church Slavonic, Russian Synodal) replaced Hebrew concepts with foreign philosophy:
 
-Этот проект — не о критике переводов. Это о возвращении. Мы берём слово, которое было искажено, и возвращаем его к корню. Мы смотрим, как אֱמֶת (истина) превратилась в «истину», потеряв связь с корнем אמן (надёжный). Как בְּרִית (союз) стал «заветом», потеряв кровное родство. Как תְּשׁוּבָה (возвращение) стала «покаянием», потеряв радость дома.
+- *Torah* became "Law" (not Teaching)
+- *Chesed* became "Mercy" (not Covenant Loyalty)  
+- *Teshuvah* became "Repentance" (not Returning)
+- *Tzedakah* became "Alms" (not Righteousness)
+- *Brit* became "Covenant" (not Bond)
 
-עַל מָה הַפְּרוּיֶקְט — О чём этот проект
+**Our AI restores what was lost.**
 
-О языке, который был украден. И о его возвращении.
+---
 
-О имён.
-Как יְהֹוָה (Яхве) стал «Господом», а потом «Богом». Как יְהוֹשֻׁעַ (Йехошуа) стал Иисусом, потеряв связь с именем Отца. Как מָשִׁיחַ (Машиах) стал Христом, превратившись из помазанника в титул.
+## 🧠 What The AI Model Does
 
-О понятий.
-Что такое תּוֹרָה? Не «закон», а учение, путь, наставление.
-Что такое חֶסֶד? Не «милость», а верность союзу, любовь, которая не оставляет.
-Что такое צְדָקָה? Не «милостыня», а праведность, справедливость, восстановление порядка.
+**1. Corruption Detection**  
+Identifies Greek, Latin, and Slavic insertions that replaced authentic Hebrew words.
 
-О грамматики.
-Как иврит, где слово и дело — одно, превратился в языки, где можно говорить одно, а делать другое. Как глагол «быть» стал связкой, потеряв свою силу. Как имена перестали быть сутью, превратившись в ярлыки.
+**2. Etymological Restoration**  
+Traces every word to its Semitic root. Restores concrete meanings over abstract theological reinterpretations.
 
-О переводах.
-Как Септуагинта заменила иврит греческим. Как Вульгата заменила греческий латынью. Как церковнославянский принёс на Русь не библейский иврит, а византийскую версию. Как синодальный перевод закрепил ошибки и сделал их «каноном».
+**3. Textual Reconstruction**  
+Suggests restored Hebrew readings with full critical apparatus (DSS, MT, LXX comparison).
 
-מָה בִּפְנִים — Структура проекта
+**4. Translation Comparison**  
+Shows how the same verse was altered across Septuagint → Vulgate → Slavonic → Synodal.
 
-חֵלֶק א. הַשֵּׁם — Имя
+---
 
-· יְהֹוָה — откуда взялся «Господь» и «Бог»
-· יְהוֹשֻׁעַ — как Иисус потерял своё имя
-· מָשִׁיחַ — как помазанник стал титулом
-· רוּחַ הַקֹּדֶשׁ — как дыхание стало «Святым Духом»
+## 📂 Repository Structure
 
-חֵלֶק ב. הַמֻּשָּׂג — Понятие
+```
 
-· תּוֹרָה — закон или учение?
-· בְּרִית — союз или завет?
-· תְּשׁוּבָה — возвращение или покаяние?
-· חֶסֶד — милость или верность?
-· צְדָקָה — милостыня или праведность?
-· קָרְבָּן — жертва или приближение?
-· שָׁלוֹם — мир или целостность?
-· אֱמֶת — истина или надёжность?
+HaLevHaLashon/
+├── data/
+│   ├── tanakh/wlc/              # Westminster Leningrad Codex
+│   ├── tanakh/dss/              # Dead Sea Scrolls
+│   ├── corruptions/             # Known Greek/Latin insertions
+│   └── etymology/               # Semitic root database
+├── models/
+│   ├── restoration_model/       # Primary AI
+│   ├── corruption_detector/     # Foreign layer detection
+│   └── etymology_model/         # Root mapping
+├── src/
+│   ├── cli/restore.py           # Restore single verse
+│   ├── core/textual_criticism.py
+│   └── api/server.py
+├── output/
+│   ├── restored_tanakh/         # Complete restored Hebrew text
+│   └── corruption_reports/      # Per-verse analysis
+└── notebooks/
+└── examples/                # Step-by-step restorations
 
-חֵלֶק ג. הַדִּקְדּוּק — Грамматика
+```
 
-· Почему в иврите нет абстракций
-· Как глагол «быть» стал связкой
-· Как имена потеряли свою суть
-· Как слово перестало быть делом
+---
 
-חֵלֶק ד. הַתַּרְגּוּם — Перевод
+## 🔬 Example
 
-· Септуагинта: как греческий убил иврит
-· Вульгата: как латынь добавила империю
-· Церковнославянский: как Византия перекрыла источник
-· Синодальный: как закрепились искажения
-· Современные переводы: что изменилось, что осталось
+**Input (Russian Synodal):**  
+*"В начале сотворил Бог небо и землю"*
 
-אֵיךְ לִקְרוֹא — Как пользоваться проектом
+**AI Detection:**
+- "Бог" — Greek *theos* replacing names (Yahweh, Elohim)
+- "сотворил" — Greek *creatio ex nihilo* (absent in Hebrew)
 
-Каждая глава строится по одной схеме:
+**AI Restoration:**  
+*"В начале создал Элохим небеса и землю"*
 
-1. מִלָּה בְּעִבְרִית — слово на иврите
-2. שֹׁרֶשׁ — корень и его значения
-3. בַּתָּנָ״ךְ — как слово используется в ТаНаХе
-4. בַּתַּרְגּוּם — как его перевели (греческий, латынь, славянский, русский)
-5. הַשְׁחָתָה — что было потеряно или искажено
-6. הַחְזָרָה — как вернуть истинный смысл
+**Commentary:**
+- *ברא* — not "create from nothing" but "separate, give form"
+- *אלהים* — not abstract "deity" but plural fullness (judges, powers, Most High)
 
-לָמָּה זֶה חָשׁוּב — Почему это важно
+---
 
-Потому что язык, на котором ты молишься, формирует твою веру.
-Если ты называешь Яхве «Господом», ты теряешь личное отношение.
-Если ты называешь союз «заветом», ты теряешь родство.
-Если ты называешь тшуву «покаянием», ты теряешь радость возвращения.
+## 📜 Core Corruptions Being Addressed
 
-Мы не можем читать Писание на иврите все. Но мы можем знать, какие слова были искажены. И читать переводы с открытыми глазами. Видя за «Господом» — имя Яхве. За «заветом» — союз. За «покаянием» — возвращение.
+| Hebrew | False Translation | Restored Meaning |
+|--------|-------------------|------------------|
+| תּוֹרָה | Law | Teaching, Instruction |
+| חֶסֶד | Mercy | Covenant Loyalty, Faithful Love |
+| תְּשׁוּבָה | Repentance | Returning Home |
+| צְדָקָה | Alms | Righteousness, Justice |
+| בְּרִית | Covenant | Bond, Blood Union |
+| אֱמֶת | Truth | Reliability, Faithfulness |
+| שָׁלוֹם | Peace | Wholeness, Completeness |
+| קָרְבָּן | Sacrifice | Drawing Near |
 
-יַעַד — Цель
+---
 
-Не создать новый перевод. Не объявить, что только мы знаем истину. А открыть дверь. Чтобы каждый, кто читает Писание, мог спросить: «А что здесь было на самом деле?» Чтобы синодальный перевод перестал быть стеной, за которой не видно оригинала.
+## 🚀 Quick Start
 
-אַחְרָיוּת — Об ответственности
+**Detect corruptions in a verse:**
+```bash
+python src/cli/detect.py --verse "Genesis 1:1" --output json
+```
+
+Restore entire chapter:
+
+```bash
+python src/cli/restore.py --chapter "Isaiah 53" --output restored/
+```
+
+Compare translations:
+
+```bash
+python src/cli/compare.py --verse "Exodus 34:6" --translations lxx,vulgate,synodal
+```
+
+---
+
+🗺️ Roadmap
+
+Phase 1 (Current) — Data collection: WLC, DSS, Septuagint, Vulgate, Church Slavonic, Synodal
+
+Phase 2 — Train corruption detector on documented Greek/Latin insertions
+
+Phase 3 — Train restoration model (corrupted → authentic Hebrew)
+
+Phase 4 — Generate complete restored Tanakh with critical apparatus
+
+Phase 5 — Extend to BaSha"h (Babylonian Talmud, Shas, Halakhot)
+
+---
+
+🤝 Who We Need
+
+· Hebrew/Aramaic linguists (verify AI output)
+· Textual critics (DSS, manuscript traditions)
+· NLP engineers (Hebrew LLM fine-tuning)
+· Jewish scholars (authentic tradition guidance)
+
+---
+
+📄 License
+
+CC BY-SA 4.0 — Code, data, and model weights are open. Any improvements must be shared back.
+
+---
+
+🌄 The Goal
+
+Not to create a "better Bible translation." Not to claim exclusive truth. But to open the door.
+
+So that every reader of Scripture can ask: "What was actually written here?"
+
+So that the Synodal translation ceases to be a wall hiding the original.
+
+---
 
 וִידַעְתֶּם אֶת־הָאֱמֶת וְהָאֱמֶת תְּשַׁחְרֵר אֶתְכֶם
-«И познаете истину, и истина сделает вас свободными» (Йн. 8:32)
+Vida'tem et ha'emet veha'emet teshachrer et'chem
+And you will know the truth, and the truth will set you free
+(John 8:32)
 
-Истина не в переводе. Истина в том, что стоит за словами. Мы не осуждаем переводчиков. Мы восстанавливаем то, что было потеряно. Чтобы слово снова стало живым. Чтобы имя снова стало именем. Чтобы союз с Яхве стал не договором, а жизнью.
+---
 
-יְהִי אוֹר
-Да будет свет
+Built for those who seek the original Word. Not as it was translated. But as it was spoken.
+
+```
+```
