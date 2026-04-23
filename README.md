@@ -1,4 +1,3 @@
-```markdown
 # 📜 HaLev HaLashon (הלב הלשון)
 
 **AI-powered restoration of Tanakh through Jewish tradition. Detecting and removing Greek, Latin, and Slavic translation corruptions. Returning to the original linguistic, etymological, and textual meaning.**
@@ -164,6 +163,3 @@ And you will know the truth, and the truth will set you free
 ---
 
 Built for those who seek the original Word. Not as it was translated. But as it was spoken.
-
-```
-```
